@@ -1,0 +1,16 @@
+<article{% if post.url == url %} data-current="current item"{% endif %}>
+  <h1>
+    <a href="{{ post.url | url }}">
+      {% if post.data.title %}
+        {{ post.data.title }} // image-hero.njk
+      {% else %}
+        Untitled
+      {% endif %}
+    </a>
+  </h1>
+  {% if post.data.summary %}
+    <h2>
+      {{ post.data.summary }}
+    </h2>
+  {% endif %}
+</article>

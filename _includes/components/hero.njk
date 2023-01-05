@@ -1,0 +1,16 @@
+<article{% if post.url == url %} data-current="current item"{% endif %}>
+  <h3>
+    <a href="{{ post.url | url }}">
+      {% if post.data.title %}
+        {{ post.data.title }} // THIS WAS RENDERED WITH hero.njk
+      {% else %}
+        Untitled
+      {% endif %}
+    </a>
+  </h3>
+  {% if post.data.summary %}
+    <h2>
+      {{ post.data.summary }}
+    </h2>
+  {% endif %}
+</article>
